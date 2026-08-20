@@ -30,11 +30,12 @@ namespace dobihara2
         {
             pb1.Image = di1;
             pb1.Width = 1980;
-            pb1.Height = 400;
+            pb1.Height = 242;
             //pb1.SizeMode = PictureBoxSizeMode.Zoom;
             pb1.Location = new Point(csx1, csy1);
             //pb1.Location = new Point(this.Controls.Count, 400);
             this.Controls.Add(pb1);
+            //cws1();
         }
         public void resw1(object sender, EventArgs e)
         {
@@ -43,9 +44,17 @@ namespace dobihara2
         }
         public void resw2(object sender, EventArgs e)
         {
+            cws1();
+        }
+        public void cws1()
+        {
+            Point ws = new Point(this.ClientSize.Width, this.ClientSize.Height);
             pb1.Location = new Point(csx1, csy1);
-            MessageBox.Show(this.ClientSize.Height.ToString());
-            
+            //MessageBox.Show(this.ClientSize.Height.ToString());
+            if (ws.Y / 2 != 0)
+            {
+                MessageBox.Show(ws.Y.ToString());
+            }
             //pb1.Height = 500;
         }
     }
